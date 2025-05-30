@@ -1,0 +1,128 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+}
+
+body{
+    background-color: #6366f2;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'poppins', sans-serif;
+}
+
+.container{
+    background-color: #f0f8ff;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.header-container{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btns{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px 8px 0 0;
+    background-color: transparent;
+    font-family: 'poppins', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btns:hover{
+    background-color: #8598fa;
+}
+
+.btn-active{
+    background-color: #a5b4fc;
+}
+
+.content{
+    display: none;
+}
+
+.show{
+    display: flex;
+    gap: 10px;
+    background-color: #a5b4fc;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+    align-items: center;
+}
+
+.content-img{
+    width: 40%;
+    height: 250px;
+}
+
+.content-description{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.content-description p{
+    font-size: 15px;
+}
+
+@media (max-width: 620px){
+    body{
+        padding: 10px;
+    }
+    .container{
+        flex-direction: row;
+        height: 500px;
+        width: 100%;
+        padding: 20px 20px 20px 0;
+        border-radius: 10px;
+    }
+    .header-container{
+        flex-direction: column;
+    }
+    .show{
+        flex-direction: column;
+        border-radius: 0 10px 10px 0;
+    }
+    .btns{
+        border-radius: 0;
+        font-size: 14px;
+        font-weight: 400;
+        padding: 0;
+        width: 100%;
+        height: 70px;
+        padding: 5px;
+    }
+    .content-img{
+        width: 200px;
+        height: 40%;
+    }
+
+}
+
+@media (max-width:430px){
+    .show{
+        overflow: scroll;
+    }
+    .show::-webkit-scrollbar{
+        display: none;
+    }
+}
